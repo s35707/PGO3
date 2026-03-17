@@ -19,22 +19,26 @@ public class Book {
             System.out.println("Page Count: "+book.pageCount);
             System.out.println("Is the book available: "+book.available);
         }
-        public static void borrow(Book book){
+        public static boolean borrow(Book book){
             if(book.available){
                 book.available = false;
                 System.out.println(book.title+" was successfully borrowed");
+                return true;
             }
             else{
                 System.out.println(book.title+" isn't available");
+                return true;
             }
         }
-        public static void returnBook(Book book){
+        public static boolean returnBook(Book book){
             if(book.available){
                 System.out.println(book.title+" was already avaliable");
+                return false;
             }
             else{
                 book.available = true;
                 System.out.println(book.title+" was successfully returned");
+                return true;
             }
         }
         public static String getTitle(Book book){
