@@ -40,7 +40,7 @@ public class Library {
             System.out.println("nothing :(");
         }
     }
-    public static void findBookByTitle(String title,Library library){
+    public static Book findBookByTitle(String title,Library library){
         Book result = null;
         int x = 0;
         while(x < library.books.length){
@@ -51,13 +51,7 @@ public class Library {
             }
             x++;
         }
-        if (result != null){
-            System.out.println("Info about the requested book:");
-            Book.printInfo(result);
-        }
-        else{
-            System.out.println("The library does not contain a book titled "+title);
-        }
+        return result;
     }
     public static int countAvailableBooks(Library library){
         int result = 0;
