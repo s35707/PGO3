@@ -7,12 +7,13 @@ public class Main {
         Reader reader1 = new Reader("Jane","Doe",1240,1);
         Reader reader2 = new Reader("Meg", "Thomas",1945,4);
 
-        Reader.printData(reader1);
-        Reader.printData(reader2);
-        Reader.increaseBorrowedCount(reader2);
-        Reader.printData(reader2);
-        Reader.decreaseBorrowedCount(reader2);
-        Reader.printData(reader2);
+
+        Library library1 = new Library(100);
+        Library.addBook(book1,library1);
+        Library.addBook(book2,library1);
+        System.out.println(Library.countAvailableBooks(library1));
+        Book.borrow(book1);
+        System.out.println(Library.countAvailableBooks(library1));
 
 
     }

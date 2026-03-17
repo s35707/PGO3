@@ -37,7 +37,12 @@ public class Book {
                 System.out.println(book.title+" was successfully returned");
             }
         }
-
+        public static String getTitle(Book book){
+            return book.title;
+        }
+        public static Boolean isAvailable(Book book){
+            return book.available;
+        }
 
 
 
